@@ -2,7 +2,6 @@
 
 Market-neutral long-short strategy on the 500 largest US stocks, 1995–2025: Barra-style risk model,
 Grinold alphas from stock characteristics, and a monthly max-Sharpe portfolio solved with Gurobi.
-Deadlines: preliminary Oct 2 (midnight), final Oct 5 (noon); slides ≤ 10 pages, anonymous PDF.
 
 ## Run it
 1. Python 3.12, `pip install -r requirements.txt`, plus a Gurobi license (academic is fine).
@@ -15,11 +14,9 @@ Deadlines: preliminary Oct 2 (midnight), final Oct 5 (noon); slides ≤ 10 pages
 | `project_topic4.ipynb` | Whole pipeline, experiments and results (the demo deliverable) |
 | `wrds_data.py` | WRDS queries and the parquet cache |
 | `MktRf.csv` | Monthly market excess return and risk-free rate (Ken French), **in percent** |
-| `monthly_returns.csv` | *Not in git.* Optional CRSP `msf_v2` export from the WRDS website (300 MB) |
 | `data/` | *Not in git.* Parquet cache, rebuilt automatically; delete it to force a fresh pull |
 
-**Data flow:** CRSP monthly comes from `monthly_returns.csv` if present, otherwise the same table is pulled
-with the API (identical rows). Either way it is cached as `data/crsp.parquet`, and the CSV is read only once.
+**Data flow:** CRSP monthly comes from `monthly_returns.csv` (downloaded manually fron WRDS) if present, otherwise the same table is pulled with the API (identical rows). Either way it is cached as `data/crsp.parquet`, and the CSV is read only once.
 CRSP daily returns (stocks ever in the universe only), Fama-French daily factors, Compustat annual,
 the CCM link and the GICS history are always pulled with the API. Never commit raw CRSP/Compustat data:
 the WRDS license forbids it and the repo is public.
