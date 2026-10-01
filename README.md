@@ -5,7 +5,7 @@ Grinold alphas from stock characteristics, and a monthly max-Sharpe portfolio so
 Deadlines: preliminary Oct 2 (midnight), final Oct 5 (noon); slides ≤ 10 pages, anonymous PDF.
 
 ## Run it
-1. Python 3.12 with `numpy pandas scipy statsmodels matplotlib pyarrow wrds gurobipy`, plus a Gurobi license (academic is fine).
+1. Python 3.12, `pip install -r requirements.txt`, plus a Gurobi license (academic is fine).
 2. In the first code cell of `project_topic4.ipynb`, set `WRDS_USERNAME` to your WRDS username.
 3. Run all cells: about 10 minutes. The first run also pulls about 3 minutes of WRDS data into `data/`.
 
