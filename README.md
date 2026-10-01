@@ -25,14 +25,14 @@ the CCM link and the GICS history are always pulled with the API. Never commit r
 the WRDS license forbids it and the repo is public.
 
 ## Method (notebook sections)
-1–4. Data, point-in-time GICS sectors, universe (top 500 by cap; incumbents stay while rank ≤ 550), benchmarks
-5. Characteristics: beta and residual vol from 252 daily returns, size; signals `mom`, `rev`, `gp`, `ag`
-6. Risk model $V = XFX^\top + D$ from monthly cross-sectional WLS regressions (10 sectors + styles)
-7. Monthly Spearman ICs (raw and vs risk-model residuals)
-8. Alpha = IC × residual vol × z
-9. Gurobi: max α'w − κ·turnover s.t. risk budget, dollar-neutral, factor exposures within ±margin
-10–13. Experiments: are the signals systematic, three risk treatments, turnover penalty, covariance estimators
-14–15. Combination preview and summary
+- **1–4** Data, point-in-time GICS sectors, universe (top 500 by cap; incumbents stay while rank ≤ 550), benchmarks
+- **5** Characteristics: beta and residual vol from 252 daily returns, size; signals `mom`, `rev`, `gp`, `ag`
+- **6** Risk model `V = X F Xᵀ + D` from monthly cross-sectional WLS regressions (10 sectors + styles)
+- **7** Monthly Spearman ICs (raw and vs risk-model residuals)
+- **8** Alpha = IC × residual vol × z
+- **9** Gurobi: max α'w − κ·turnover s.t. risk budget, dollar-neutral, factor exposures within ±margin
+- **10–13** Experiments: are the signals systematic, three risk treatments, turnover penalty, covariance estimators
+- **14–15** Combination preview and summary
 
 ## Results so far (1995–2025, net of 10 bp costs, turnover penalty = cost)
 | Long-short book | Net Sharpe | Beta | Alpha t-stat |
