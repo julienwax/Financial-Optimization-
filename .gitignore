@@ -1,0 +1,16 @@
+# Data: large, and WRDS-licensed (raw CRSP/Compustat must not be redistributed)
+data/
+monthly_returns.csv
+
+# Course handout (repo is public)
+project.pdf
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
