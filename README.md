@@ -44,6 +44,15 @@ the risk-free rate (2.4% a year on average).
 | Plain sum of Grinold alphas | 1.12 | 0.72 | 6.6% | 5.9% | −19% |
 | Plain sum, cross-sectional mean σ | 1.20 | 0.80 | 7.0% | 5.9% | −14% |
 
+**Return / vol on total returns** (daily returns, RF not subtracted; mean / std × √252)
+
+| Book | Return / vol | Ann. return | Ann. vol | Max drawdown | Return / vol 1995–2004 | Return / vol 2005–2014 | Return / vol 2015–2025 |
+|---|---|---|---|---|---|---|---|
+| Market (benchmark) | 0.66 | 12.5% | 19.0% | −55% | 0.71 | 0.49 | 0.78 |
+| **Averaged books (mom, gp, ag)** | **1.43** | 5.1% | 3.6% | −6% | 2.21 | 0.91 | 1.15 |
+| Plain sum of Grinold alphas | 1.12 | 6.6% | 5.9% | −19% | 1.83 | 0.64 | 0.86 |
+| Plain sum, cross-sectional mean σ | 1.20 | 7.0% | 5.9% | −14% | 1.69 | 0.96 | 0.98 |
+
 **Single-signal books** (section 12, monthly returns)
 
 | Long-short book | Net Sharpe | Beta | Alpha t-stat |
