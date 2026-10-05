@@ -5,21 +5,20 @@ Grinold alphas from stock characteristics, and a monthly max-Sharpe portfolio so
 
 ## Run it
 1. Python 3.12, `pip install -r requirements.txt`, plus a Gurobi license (academic is fine).
-2. In the first code cell of `mygroup_project.ipynb`, set `WRDS_USERNAME` to your WRDS username.
+2. In the first code cell of `project_demo.ipynb`, set `WRDS_USERNAME` to your WRDS username.
 3. Run all cells: about 10 minutes. The first run also pulls about 3 minutes of WRDS data into `data/`.
 
 ## Files
 | File | Content |
 |---|---|
-| `mygroup_project.ipynb` | Whole pipeline, experiments and results (the demo deliverable) |
+| `project_demo.ipynb` | Whole pipeline, experiments and results (the demo deliverable) |
 | `wrds_data.py` | WRDS queries and the parquet cache |
 | `MktRf.csv` | Monthly market excess return and risk-free rate (Ken French), **in percent** |
 | `data/` | *Not in git.* Parquet cache, rebuilt automatically; delete it to force a fresh pull |
 
 **Data flow:** CRSP monthly comes from `monthly_returns.csv` (downloaded manually from WRDS) if present, otherwise the same table is pulled with the API (identical rows). Either way it is cached as `data/crsp.parquet`, and the CSV is read only once.
 CRSP daily returns (stocks ever in the universe only), Fama-French daily factors, Compustat annual,
-the CCM link and the GICS history are always pulled with the API. Never commit raw CRSP/Compustat data:
-the WRDS license forbids it and the repo is public.
+the CCM link and the GICS history are always pulled with the API.
 
 ## Method (notebook sections)
 - **1–4** Data, point-in-time GICS sectors, universe (top 500 by cap; incumbents stay while rank ≤ 550), benchmarks
@@ -67,6 +66,3 @@ the risk-free rate (2.4% a year on average).
 * The turnover penalty cuts turnover 3–6× and raises net Sharpe. Reversal only works before costs.
 * Sector factors matter a lot. Extra covariance shrinkage did not help.
 * The final books are almost uncorrelated with the market (correlation +0.04).
-
-## Next steps
-- Sub-period and drawdown analysis of the final strategy, then the slides
